@@ -10,7 +10,7 @@ type ErrorType uint
 
 const (
 	// NoType error
-	NoType = ErrorType(iota)
+	NoType ErrorType = iota
 	// BadRequest error
 	BadRequest
 	// NotFound error
