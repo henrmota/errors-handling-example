@@ -1,10 +1,9 @@
-package main
+package main_test
 
 import (
-	errs "errors"
 	"github.com/stretchr/testify/assert"
 	"testing"
-	"github.com/henrmota/errors-handling-example/errors"
+	errors "github.com/henrmota/errors-handling-example"
 )
 func TestContext(t *testing.T) {
 
@@ -19,7 +18,7 @@ func TestContext(t *testing.T) {
 }
 
 func TestContextInNoTypeError(t *testing.T) {
-	err := errs.New("a custom error")
+	err := errors.New("a custom error")
 
 	errWithContext := errors.AddErrorContext(err, "a_field", "the field is empty")
 
