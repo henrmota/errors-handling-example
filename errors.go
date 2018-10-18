@@ -63,7 +63,7 @@ func Newf(msg string, args ...interface{}) error {
 	return customError{errorType: NoType, originalError: errors.New(fmt.Sprintf(msg, args...))}
 }
 
-// Wrap wrans an error with a string
+// Wrap an error with a string
 func Wrap(err error, msg string) error {
 	return Wrapf(err, msg)
 }
@@ -73,7 +73,7 @@ func Cause(err error) error {
 	return errors.Cause(err)
 }
 
-// Wrapf wraps an error with format string
+// Wrapf an error with format string
 func Wrapf(err error, msg string, args ...interface{}) error {
 	wrappedError := errors.Wrapf(err, msg, args...)
 	if customErr, ok := err.(customError); ok {

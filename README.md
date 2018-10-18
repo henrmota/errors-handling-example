@@ -29,7 +29,7 @@ Adding a new context to an existing error:
 In the top layer when you decide to log or return a web response:
 
 ```GO
-  errors.GetType(err) === erros.BadRequest // true
+  errors.GetType(err) == errors.BadRequest // true
   errors.GetContext(err) // map[string]string{"field": "field", "message": "message"}
 ```
 
